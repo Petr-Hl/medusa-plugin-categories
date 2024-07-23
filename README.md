@@ -44,6 +44,7 @@ const plugins = [
 ## Screenshots
 
 ![image](https://github.com/user-attachments/assets/498f655d-a7eb-4862-bfda-45bfd8db8a66)
+
 ![image](https://github.com/user-attachments/assets/4a1092b2-a597-4f71-9c86-7f2165f0cf5c)
 
 ---
