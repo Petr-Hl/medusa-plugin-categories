@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { dropRight, flatMap, get } from "lodash";
-// import Nestable from "react-nestable";
+import Nestable from "react-nestable";
 
 // import "react-nestable/dist/styles/index.css";
 import NestableCategoriesStyle from "./utils/nestable-style";
@@ -76,36 +76,35 @@ function ProductCategoriesList(props: ProductCategoriesListProps) {
   );
 
   const NestableList = (
-    <></>
-    // <Nestable
-    //   items={categories}
-    //   collapsed={true}
-    //   onChange={onItemDrop}
-    //   childrenProp="category_children"
-    //   // Adding an unreasonably high number here to prevent us from
-    //   // setting a hard limit  on category depth. This should be decided upon
-    //   // by consumers of medusa after considering the pros and cons to the approach
-    //   maxDepth={99}
-    //   renderItem={({ item, depth, handler, collapseIcon }) => (
-    //     <ProductCategoryListItemDetails
-    //       item={item as ProductCategory}
-    //       categories={flattenedCategories}
-    //       depth={depth}
-    //       handler={handler}
-    //       collapseIcon={collapseIcon}
-    //       notify={notify}
-    //     />
-    //   )}
-    //   handler={
-    //     <AiOutlineDrag className="cursor-move" color="#a1a1aa" size={24} />
-    //   }
-    //   renderCollapseIcon={({ isCollapsed }) => (
-    //     <PlaySolid
-    //       color="#a1a1aa"
-    //       className={clx("cursor-pointer", { "rotate-90": !isCollapsed })}
-    //     />
-    //   )}
-    // />
+    <Nestable
+      items={categories}
+      collapsed={true}
+      onChange={onItemDrop}
+      childrenProp="category_children"
+      // Adding an unreasonably high number here to prevent us from
+      // setting a hard limit  on category depth. This should be decided upon
+      // by consumers of medusa after considering the pros and cons to the approach
+      maxDepth={99}
+      renderItem={({ item, depth, handler, collapseIcon }) => (
+        <ProductCategoryListItemDetails
+          item={item as ProductCategory}
+          categories={flattenedCategories}
+          depth={depth}
+          handler={handler}
+          collapseIcon={collapseIcon}
+          notify={notify}
+        />
+      )}
+      handler={
+        <AiOutlineDrag className="cursor-move" color="#a1a1aa" size={24} />
+      }
+      renderCollapseIcon={({ isCollapsed }) => (
+        <PlaySolid
+          color="#a1a1aa"
+          className={clx("cursor-pointer", { "rotate-90": !isCollapsed })}
+        />
+      )}
+    />
   );
   return (
     <div className={clx("relative", { "pointer-events-none": isUpdating })}>

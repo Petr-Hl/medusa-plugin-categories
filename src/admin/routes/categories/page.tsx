@@ -105,7 +105,7 @@ const CategoriesPage = ({ notify }: { notify: Notify }) => {
             onClick={showCreateModal}
           >
             <PlusMini />
-            New main category
+            New root category
           </Button>
         </div>
         <div className="flex flex-col justify-between mt-4 h-full w-full">
