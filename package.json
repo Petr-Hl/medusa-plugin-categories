@@ -1,6 +1,6 @@
 {
   "name": "medusa-plugin-categories",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Product categories with thumbnails modul for Medusajs Admin-UI",
   "author": "PetrH < https://github.com/Petr-Hl >",
   "license": "MIT",
@@ -13,9 +13,9 @@
     "ecommerce",
     "headless",
     "medusa",
-    "medusajs",
     "medusa-plugin",
     "medusa-plugin-admin",
+    "medusa-plugin-other",
     "medusa-plugin-category",
     "medusa-plugin-category-images"
   ],
@@ -28,28 +28,52 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
+    "react-icons": "^5.2.1",
     "react-nestable": "^3.0.2"
   },
   "devDependencies": {
     "@medusajs/admin": "^7.1.15",
-    "@medusajs/icons": "^1.2.2",
     "@medusajs/medusa": "^1.20.8",
     "@medusajs/ui": "^3.0.1",
     "@tanstack/react-query": "4.22.0",
-    "@types/mime": "3.0.4",
     "@types/node": "^20.14.12",
     "cross-env": "^7.0.3",
     "dotenv": "16.4.5",
-    "medusa-react": "^9.0.18",
-    "react-icons": "^5.2.1",
     "rimraf": "^6.0.1",
     "typescript": "5.5.4"
   },
   "peerDependencies": {
+    "@medusajs/icons": "^1.1.0",
     "@medusajs/medusa": ">= 1.18.0 < 2",
-    "@medusajs/ui": "^2.0.0",
+    "@medusajs/ui": "^2.2.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsconfig": "tsconfig.spec.json"
+      }
+    },
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "<rootDir>/node_modules/"
+    ],
+    "rootDir": "src",
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|js)$",
+    "transform": {
+      ".ts": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node"
   },
   "packageManager": "yarn@1.22.22"
 }

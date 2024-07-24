@@ -188,13 +188,10 @@ const CategoryEditModal = ({
       nativeFiles
     );
 
-    console.log("*** data.metadata before", data.metadata);
-    // data.metadata.entries = data.metadata.entries.filter((entry) => {entry.value !== "thumbnail"});
     const metadataWithThumbnail = {
       ...getSubmittableMetadata(data.metadata),
       thumbnailImageUrl: uploadedImages[0]?.url || data.thumbnail || "",
     };
-    console.log("*** metadataWithThumbnail: ", metadataWithThumbnail);
 
     const payload: AdminPostProductCategoriesCategoryReq & {
       thumbnail?: string;
@@ -211,7 +208,6 @@ const CategoryEditModal = ({
       is_internal: data.is_internal === "private",
       metadata: metadataWithThumbnail,
     };
-    console.log("*** payload after: ", payload);
     // add new one category
     if (createNew) {
       const payloadNew: AdminPostProductCategoriesReq = {
