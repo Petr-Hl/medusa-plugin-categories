@@ -31,7 +31,7 @@ yarn add medusa-plugin-categories
 const plugins = [
   // ...
   {
-    resolve: `medusa-plugin-categories`,
+    resolve: "medusa-plugin-categories",
     options: {
       enableUI: true,
     },

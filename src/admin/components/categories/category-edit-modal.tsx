@@ -24,6 +24,9 @@ import MetadataForm, {
 import TreeCrumbs from "./utils/tree-crumbs";
 import { useQueryClient } from "@tanstack/react-query";
 
+// import type { ConfigModule } from "@medusajs/medusa";
+// import { getConfigFile } from "medusa-core-utils";
+
 export type CategoryDetailsFormValues = {
   parent_category_id?: string | null;
   name: string;
@@ -60,6 +63,11 @@ const published = [
 ];
 
 // TODO - add prefix into the plugin configuration file
+// const { configModule, error } = getConfigFile<ConfigModule>(
+//   path.resolve(process.cwd()),
+//   "medusa-config.js"
+// )
+
 // const fileNamePrefix = "---"
 const fileNamePrefix = "";
 

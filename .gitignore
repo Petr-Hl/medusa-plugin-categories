@@ -24,3 +24,4 @@ www/**/.yarn/*
 build/**
 **/dist
 **/stats
+medusa-config.js
