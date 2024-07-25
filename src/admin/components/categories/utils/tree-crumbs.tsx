@@ -23,6 +23,9 @@ const TreeCrumbs: React.FC<TreeCrumbsProps> = ({
       <span className="text-grey-40">
         {currentNode &&
           ancestors.map((ancestor, index) => {
+            if (ancestor.id === currentNode.id && !showPlaceholder) {
+              return null;
+            }
             const categoryName = ancestor.name;
 
             return (
@@ -32,21 +35,14 @@ const TreeCrumbs: React.FC<TreeCrumbsProps> = ({
                     ? categoryName.substring(0, 25) + "..."
                     : categoryName}
                 </span>
-
-                {(showPlaceholder || ancestors.length !== index + 1) && (
-                  <span className="mx-2">/</span>
-                )}
+                <span className="mx-2">/</span>
               </div>
             );
           })}
 
-        {showPlaceholder && (
-          <span>
-            <span className="border-grey-40 rounded-[10px] border-[1px] border-dashed px-[8px] py-[4px]">
-              {placeholderText}
-            </span>
-          </span>
-        )}
+        <span className="border-grey-40 rounded-[10px] border-[1px] border-dashed px-[8px] py-[4px]">
+          {placeholderText}
+        </span>
       </span>
     </span>
   );
