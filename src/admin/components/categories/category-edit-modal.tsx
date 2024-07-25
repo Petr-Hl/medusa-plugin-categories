@@ -269,7 +269,7 @@ const CategoryEditModal = ({
                 <TreeCrumbs
                   nodes={categories}
                   currentNode={category}
-                  showPlaceholder={true}
+                  showPlaceholder={createNew}
                   placeholderText={form.watch("name") || "New"}
                 />
               </div>
