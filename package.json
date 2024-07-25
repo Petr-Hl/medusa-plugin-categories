@@ -1,6 +1,6 @@
 {
   "name": "medusa-plugin-categories",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Product categories with thumbnails modul for Medusajs Admin-UI",
   "author": "PetrH",
   "license": "MIT",
