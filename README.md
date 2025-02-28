@@ -1,6 +1,6 @@
 # Product categories with thumbnails
 
-Medusa admin UI modul with category thumbnail support, using metadata for store the information about thumbnail.
+Medusa v1 admin UI modul with category thumbnail support, using metadata for store the information about thumbnail.
 
 [Medusa Website](https://medusajs.com/) | [Medusa Repository](https://github.com/medusajs/medusa)
 
